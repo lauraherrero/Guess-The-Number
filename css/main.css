@@ -1,0 +1,25 @@
+.input-number{
+  border: none;
+  border-radius: 5px;
+  background-color: rgb(223, 205, 205);
+  height: 25px;
+  margin: 5px;
+}
+
+.btn {
+  border: none;
+  border-radius: 5px;
+  background-color:aqua;
+  color: #fff;
+  height: 25px;
+  margin: 5px;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.clue{
+  border: 3px solid rgb(223, 205, 205);
+}
+.game-number{
+  border: 3px solid rgb(223, 205, 205);
+}
