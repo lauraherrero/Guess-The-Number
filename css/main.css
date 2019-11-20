@@ -1,3 +1,6 @@
+.inputs{
+  display: block;
+}
 .input-number{
   border: none;
   border-radius: 5px;

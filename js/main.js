@@ -3,7 +3,8 @@
 const elementInputNumber = document.querySelector('#input-number');
 const elementButton = document.querySelector('#btn');
 const elementTextClue = document.querySelector('#clue');
-
+const elementTextTry = document.querySelector('#game-number');
+let attemps = 0;
 
 
 function getRandomNumber(max) {
@@ -11,27 +12,37 @@ function getRandomNumber(max) {
   
 }
 
+function increaseAttemps() {
+  if(attemps < 1){
+    attemps++;
+  }
+  elementTextTry.innerHTML = 'Tú número de intentos es: ' + `${attemps++}`;
+}
 
-const tryIt = () => {
+const randomNumber = getRandomNumber(100);
+console.log(randomNumber);
+
+function tryIt () {
   console.log(elementInputNumber.value);
   console.log(getRandomNumber(100));
   
-  compare ();
-} 
+  compare (randomNumber);
+  increaseAttemps ();
 
-  function compare (){
-    const randomNumber = getRandomNumber(100);
-    
+
+  function compare (num) {
+
     if (elementInputNumber.value > randomNumber){
       elementTextClue.innerHTML = 'Demasiado alto';
     } else if (elementInputNumber < randomNumber){
       elementTextClue.innerHTML = 'Demasiado bajo';
     } else if (elementInputNumber === randomNumber){
       elementTextClue.innerHTML = 'Has ganado campeona!!!!';
-    } else if (elementInputNumber < 1 || elementInputNumber > 100){
-      elementTextClue.innerHTML = 'El número debe estar entre 1 y 100';
+    } else {elementTextClue.innerHTML = 'El número debe estar entre 1 y 100';
     }
   }
+}
+ 
 
 
 
