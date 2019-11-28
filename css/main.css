@@ -1,28 +1,34 @@
-.inputs{
-  display: block;
+.main{
+  color: rgb(49, 47, 47);
+}
+.form{
+  display: flex;
+  flex-direction: column;
 }
 .input-number{
+  width: 150px;
+  height: 25px;
   border: none;
   border-radius: 5px;
   background-color: rgb(223, 205, 205);
-  height: 25px;
-  margin: 5px;
+  margin: 10px 0;
 }
 
 .btn {
+  width: 60px;
+  height: 25px;
   border: none;
   border-radius: 5px;
   background-color:aqua;
   color: #fff;
-  height: 25px;
-  margin: 5px;
-  font-size: 14px;
   font-weight: 700;
 }
 
 .clue{
   border: 3px solid rgb(223, 205, 205);
+  padding: 5px;
 }
 .game-number{
   border: 3px solid rgb(223, 205, 205);
+  padding: 5px;
 }
